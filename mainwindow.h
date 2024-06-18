@@ -8,7 +8,13 @@
 #include <QtCharts>
 #include <math.h>
 #include <QChart>
-#include <string.h>
+#include <QWidget>
+#include <QAudioRecorder>
+#include <QAudioProbe>
+#include <QTcpServer>
+#include <QTcpSocket>
+#include <QFile>
+#include <QMediaPlayer>
 
 #include <QVector>
 #include <vector>
@@ -39,10 +45,18 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    //用于显示字符
+
+
+
+    //字符用于显示
+
     QString dataLine; //文本内容
     QString signalData;
+
+
     int i=0;//变量
+
+
     //画图
     QTimer *timer;//定时器
     QSplineSeries* Series;
@@ -89,6 +103,8 @@ private slots:
     void on_pb_OpenPSKfile_clicked();
 
     void on_pb_SavePSKfile_clicked();
+
+    void on_action_triggered();
 
 private:
     Ui::MainWindow *ui;

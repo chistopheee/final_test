@@ -29,8 +29,8 @@ public:
     int A=2;//载波幅度
     int fc=4800;//载波模拟频率
     int RB=2400;//码元速率
-    int fs=96000;//fc*N 默认采样频率
-    int N=fs/RB;//20
+    int fs=96000;//fc*N;//fs/fc=一个周期多少个点//采样频率
+    int N=fs/RB;//20;//一个周期用多少个点表示
     double threshold=0;
     QString demobincode;
     void ASKDemodulation(double modulatedbuff[]);

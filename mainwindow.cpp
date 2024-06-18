@@ -1,5 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QDebug>
+#include <QtCharts>
+#include <QChartView>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -90,11 +98,11 @@ void MainWindow::DrawLine()
 
 
 
-void MainWindow::on_pb_Openfile_clicked()  //打开文件 画图
+void MainWindow::on_pb_Openfile_clicked()  //打开文件并画图
 {
-    QString filename = QFileDialog::getOpenFileName(this,"打开文件","./","Files(*.txt)");
+    QString filename = QFileDialog::getOpenFileName(this,"打开文件","./","Files(*.txt)");//获取路径 也叫filepath
     ui->statusBar->showMessage(filename);//在状态栏显示路径
-    QFile inputFile(filename);// 打开文件
+    QFile inputFile(filename);//创建文件对象 打开文件
 
     timer->stop();
     initChart();//初始化画布
@@ -108,6 +116,13 @@ void MainWindow::on_pb_Openfile_clicked()  //打开文件 画图
     signalData.clear();
     dataLine.clear();
     i=0;
+//    bincode.clear();//二进制数据的字符串
+//    hexcode.clear();
+//    memset(code_buff,0,sizeof (code_buff));
+//    memset(modulatedSignal,0,sizeof (modulatedSignal));
+//    memset(DEMOD.decode_buff,0,sizeof (DEMOD.decode_buff));
+//    memset(DEMOD.modulatedSignal,0,sizeof (DEMOD.modulatedSignal));
+
     if (inputFile.open(QIODevice::ReadOnly)) //文件打开成功
     {
 
@@ -347,4 +362,13 @@ void MainWindow::on_pb_SavePSKfile_clicked()
         QMessageBox::information(this,"提示","数据保存成功");
     }
     outputFile.close();
+}
+
+void MainWindow::on_action_triggered()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+    QString file_name = QFileDialog::getOpenFileName(this,"打开文件","test","*(*.wav)");
+    player->setMedia(QUrl::fromLocalFile(file_name));
+    player->setVolume(50); //0~100音量范围,默认是100
+    player->play();
 }

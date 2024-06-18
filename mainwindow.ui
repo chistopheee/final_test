@@ -212,7 +212,7 @@
      <x>0</x>
      <y>0</y>
      <width>1142</width>
-     <height>17</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTHX">
@@ -221,6 +221,7 @@
     </property>
     <addaction name="separator"/>
     <addaction name="actiondat"/>
+    <addaction name="action"/>
    </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
@@ -259,6 +260,11 @@
   <action name="actionmodu">
    <property name="text">
     <string>保存调制文件</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>打开音频文件</string>
    </property>
   </action>
  </widget>
