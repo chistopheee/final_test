@@ -38,4 +38,4 @@ QString HexQString_to_BinQString(const QString &temp)
     return bincode;
 }
 				
-            
+

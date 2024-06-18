@@ -63,15 +63,6 @@ void modulation::PSKmodulation(int code[],int phase)
     int pos=0;//二进制码元位置
  //   int N=20;//一个周期用多少个点表示
     int temp=N*i;
- //   int length=200;//二进制数组长度
-
-    //int sampleNum=2048;//载波数组长度
-    //int A=2;//载波幅度
-   // int fc=100;
- //   int fs=fc*N;//fs/fc=一个周期多少个点
-
- //生成载波  1：0相位  0：180°相位
-
 //生成调制信号
     i=1;//几个N
     phase=180;//调制度数
