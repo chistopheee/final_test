@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1142</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabwidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>基础功能</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2,3">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QGroupBox" name="dat">
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QPushButton" name="pb_Openfile">
+                  <property name="text">
+                   <string>打开ASK调制文件</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_Savefile">
+                  <property name="text">
+                   <string>保存ASK调制文件</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_OpenPSKfile">
+                  <property name="text">
+                   <string>打开PSK调制文件</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_SavePSKfile">
+                  <property name="text">
+                   <string>保存PSK调制文件</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="Line" name="line">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="title">
+                  <string>码元速率</string>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_RB">
+                    <property name="readOnly">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_4">
+                 <property name="title">
+                  <string>载波频率</string>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_Fc">
+                    <property name="readOnly">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="title">
+                  <string>采样频率</string>
+                 </property>
+                 <property name="flat">
+                  <bool>true</bool>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_FS">
+                    <property name="readOnly">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <widget class="QGroupBox" name="groupBox_5">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QPushButton" name="pb_Savemodu">
+                  <property name="text">
+                   <string>保存文本文件</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>读取调制数据</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QTextEdit" name="textEdit_2"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>二进制数据显示区</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTextEdit" name="textEdit"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>文本内容</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QTextEdit" name="textEdit_3"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QChartView" name="widget2" native="true">
+          <layout class="QGridLayout" name="gridLayout_2"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1142</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTHX">
+    <property name="title">
+     <string>打开文件</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actiondat"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>保存文件</string>
+    </property>
+    <addaction name="actiondat_2"/>
+    <addaction name="actionmodu"/>
+   </widget>
+   <addaction name="menuTHX"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actiondat">
+   <property name="text">
+    <string>打开文本文件</string>
+   </property>
+  </action>
+  <action name="actioncfg">
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actiondat_2">
+   <property name="text">
+    <string>保存为文本文件</string>
+   </property>
+  </action>
+  <action name="actionmodu">
+   <property name="text">
+    <string>保存调制文件</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QWidget</extends>
+   <header>qchartview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
