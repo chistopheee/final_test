@@ -5,11 +5,6 @@
 #-------------------------------------------------
 QT       += charts
 QT       += core gui
-CONFIG += utf8
-QT       += core gui multimedia charts
-QT       += core gui network
-QT += multimedia
-QT += multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
